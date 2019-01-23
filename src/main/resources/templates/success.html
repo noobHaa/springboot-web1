@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ceshi</title>
+</head>
+<body>
+<p>欢迎页面</p>
+<hr/>
+<div th:text="${name}">success</div>
+<hr/>
+
+<h4 th:text="${user}" th:each="user: ${users}"/>
+<hr/>
+<h4>
+    <span th:each="user: ${users}">
+        [[${user}]]
+        [(${user})]
+    </span>
+</h4>
+<hr/>
+
+<div th:text="${hello}"/>
+<hr/>
+<div th:utext="${hello}"/>
+</body>
+</html>
