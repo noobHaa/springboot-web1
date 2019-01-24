@@ -24,8 +24,8 @@ public class MyConfig extends WebMvcConfigurerAdapter {
     /*配置视图解析器*/
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        /*浏览器发送crud会自动跳转到success页面*/
-        registry.addViewController("/hello").setViewName("success");
+//        /*浏览器发送crud会自动跳转到success页面*/
+//        registry.addViewController("/hello").setViewName("success");
     }
 
     @Bean
