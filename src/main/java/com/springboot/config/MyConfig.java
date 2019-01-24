@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
@@ -20,7 +19,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @Version: 1.0
  */
 @Configuration
-public class MyConfig extends WebMvcConfigurationSupport {
+public class MyConfig extends WebMvcConfigurerAdapter {
 
     /*配置视图解析器*/
     @Override
@@ -42,7 +41,7 @@ public class MyConfig extends WebMvcConfigurationSupport {
             /*配置拦截器，不拦截登录页面和登录请求*/
             @Override
             public void addInterceptors(InterceptorRegistry registry) {
-                registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**").excludePathPatterns("/index.html", "/", "/user/login","/asserts/**");
+                registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**").excludePathPatterns("/index.html", "/", "/user/login", "/asserts/**");
             }
         };
         return adapter;
