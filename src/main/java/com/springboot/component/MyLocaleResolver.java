@@ -1,4 +1,4 @@
-package com.springboot.resolver;
+package com.springboot.component;
 
 import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.LocaleResolver;
@@ -10,7 +10,7 @@ import java.util.Locale;
 /**
  *
  * @ProjectName: springboot-web1
- * @Package: com.springboot.resolver
+ * @Package: com.springboot.component
  * @ClassName: MyLocaleResolver
  * @Author: gnnt
  * @Date: 2019/1/23 17:00
